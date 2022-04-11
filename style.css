@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+    --color-primary__light-cyan: hsl(193, 38%, 86%);
+    --color-primary__neon-green:hsl(150, 100%, 66%);
+    --color-neutral__grayish-blue:hsl(217, 19%, 38%);
+    --color-neutral__grayish-blue--dark:hsl(217, 19%, 24%);
+    --color-neutral__dark-blue:hsl(218, 23%, 16%);
+    --text: 'Manrope', sans-serif;
+}
+
+*::after, *,*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* html, body {
+    height: 100%;
+} */
+
+body {
+    height: 100vh;
+}
+
+body {
+    background-color: var( --color-neutral__dark-blue );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: var( --color-neutral__grayish-blue--dark );
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.card {
+    max-width: 460px;
+    height: auto;
+}
+
+.card__head {
+    color: var( --color-primary__neon-green );
+    font-weight: 800;
+    font-size: 18px;
+    font-family: var( --text );
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.card__body {
+    color: var( --color-primary__light-cyan );
+    font-weight: 800;
+    font-size: 28px;
+    font-family: var( --text );
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.card__footer {
+    padding-bottom: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__img {
+    width: 100%;
+}
+
+.card__wrapper-img--icon-dice{
+    position: absolute;
+    background-color: var( --color-primary__neon-green );
+    width: max-content;
+    padding: 20px;
+    border-radius: 100%;
+    top: 48px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__wrapper-img--icon-dice.active {
+
+    box-shadow: 0 0 28px 2px var( --color-primary__neon-green );
+
+}
+
+@media all and ( max-width: 560px ) {
+    
+    body {
+       padding: 0 20px; 
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .card__head {
+        font-size: 12px;
+    }
+
+    .card__body {
+        font-size: 18px;
+    }
+
+}
